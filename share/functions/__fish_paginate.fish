@@ -2,7 +2,7 @@ function __fish_paginate -d "Paginate the current command using the users defaul
 
     set -l cmd less
     if set -q PAGER
-        set cmd $PAGER
+        eval set cmd $PAGER
     end
 
     if test -z (commandline -j | string join '')
